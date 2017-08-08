@@ -3,6 +3,7 @@
  */
 import originJSONP from 'jsonp'
 
+// 封装jsonp的跨域请求方法，并加入Promise的支持
 export default function jsonp(url, data, option) {
   url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
 
