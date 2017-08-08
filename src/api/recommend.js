@@ -15,3 +15,19 @@ export function getRecommend () {
 
   return jsonp(url, data, options)
 }
+
+export function getDiscList () {
+  const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_first_yqq.fcg'
+
+  const data = Object.assign({}, commonParams, {
+    platform: 'yqq',
+    hostUin: 0,
+    loginUin: 0,
+    page: 'other',
+    tpl: 'v12',
+    needNewCode: 0,
+    rnd: Math.random()
+  })
+
+  return jsonp(url, data, options)
+}
